@@ -10,15 +10,15 @@ public class Grid {
     public int cols;
     public int[][] body;
 
-    public Grid(int colMax, int rowMax) {
-        cols = colMax;
-        rows = rowMax;
+    public Grid(int xMax, int yMax) {
+        cols = xMax + 1;
+        rows = yMax + 1;
 
         this.createBody();
     }
 
     private void createBody() {
-        this.body = new int[this.rows+1][this.cols+1];
+        this.body = new int[this.rows][this.cols];
     }
 
 }
