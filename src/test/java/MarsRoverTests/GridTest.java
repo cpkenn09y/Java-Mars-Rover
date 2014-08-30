@@ -2,7 +2,6 @@ package MarsRoverTests;
 
 import MarsRover.Grid;
 import org.junit.Test;
-import org.junit.*;
 import static org.junit.Assert.*;
 
 /**
@@ -12,13 +11,21 @@ public class GridTest {
     @Test
     public void testCols() {
         Grid testGrid = new Grid(3, 6);
-        assertEquals(testGrid.cols, 4);
+        assertEquals(
+            "Grids should have a cols attribute",
+            testGrid.cols,
+            4
+        );
     }
 
     @Test
     public void testRows() {
         Grid testGrid = new Grid(3, 6);
-        assertEquals(testGrid.rows, 7);
+        assertEquals(
+            "Grids should have a rows attribute",
+            testGrid.rows,
+            7
+        );
     }
 
     @Test
@@ -26,7 +33,7 @@ public class GridTest {
         Grid testGrid1 = new Grid(2,2);
         int[][] intArrayTwoD = {{0,0,0}, {0,0,0}, {0,0,0}};
         assertArrayEquals(
-            "A 2x2 grid has 3 columns and 3 rows, a total of 9 coordinates",
+            "A 2x2 grid should have 3 columns and 3 rows, a total of 9 coordinates",
             testGrid1.body,
             intArrayTwoD
         );
@@ -37,9 +44,9 @@ public class GridTest {
         Grid testGrid2 = new Grid(2,3);
         int[][] intArrayTwoD = {{0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}};
         assertArrayEquals(
-                "A 2x3 grid has 3 columns and 4 rows, totaling 12 coordinates",
-                testGrid2.body,
-                intArrayTwoD
+            "A 2x3 grid should have 3 columns and 4 rows, totaling 12 coordinates",
+            testGrid2.body,
+            intArrayTwoD
         );
     }
 

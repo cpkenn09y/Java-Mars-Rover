@@ -2,7 +2,6 @@ package MarsRoverTests;
 
 import MarsRover.Rover;
 import org.junit.Test;
-import org.junit.*;
 import static org.junit.Assert.*;
 
 /**
@@ -13,14 +12,22 @@ public class RoverTest {
     @Test
     public void testName() {
         Rover testRover = new Rover("George", 3, 6);
-        assertEquals(testRover.name, "George");
+        assertEquals(
+            "Rovers should have a name attribute",
+            testRover.name,
+            "George"
+        );
     }
 
     @Test
     public void testCoordinates() {
         Rover testRover = new Rover("George", 3, 6);
-        int[] arr = {3,6};
-        assertArrayEquals(testRover.coordinates, arr);
+        int[] coordinates = {3,6};
+        assertArrayEquals(
+            "Rovers should have coordinates that are an array of two integers",
+            testRover.coordinates,
+            coordinates
+        );
     }
 
 }
