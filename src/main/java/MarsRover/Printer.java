@@ -28,4 +28,10 @@ public class Printer {
             System.out.println(Arrays.toString(grid[i]));
         }
     }
+
+    public static void show(String[][] grid) {
+        for (int i = 0; i < grid.length; i ++) {
+            System.out.println(Arrays.toString(grid[i]));
+        }
+    }
 }
