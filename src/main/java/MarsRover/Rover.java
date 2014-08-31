@@ -1,5 +1,6 @@
 package MarsRover;
 import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * Created by KennethYu on 8/28/14.
@@ -7,11 +8,14 @@ import java.util.Arrays;
 public class Rover {
 
     public String name;
-    public int[] coordinates = new int[2];
+    public String x;
+    public String y;
+    public String orientation;
 
-    public Rover(String givenName, int xCoordinate, int yCoordinate) {
+    public Rover(String givenName, HashMap<String,String> position) {
         name = givenName;
-        coordinates[0] = xCoordinate;
-        coordinates[1] = yCoordinate;
+        x = position.get("xCoordinate");
+        y = position.get("yCoordinate");
+        orientation = position.get("orientation");
     }
 }
