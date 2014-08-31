@@ -15,11 +15,12 @@ public class Printer {
         System.out.println(str);
     }
 
-    public static void show(String[] arrayWords) {
-        int i;
-        for (i=0; i < arrayWords.length; i++) {
-            System.out.println(arrayWords[i]);
-        }
+    public static void show(String[] strArray) {
+        System.out.println(Arrays.toString(strArray));
+    }
+
+    public static void show(int[] intArray) {
+        System.out.println(Arrays.toString(intArray));
     }
 
     public static void show(int[][] grid) {
