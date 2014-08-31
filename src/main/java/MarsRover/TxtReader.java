@@ -26,7 +26,7 @@ public class TxtReader {
         return textLines;
     }
     
-    private static int getLineCount(String filePath) throws IOException {
+    public static int getLineCount(String filePath) throws IOException {
         FileReader file = new FileReader(filePath);
         BufferedReader bufferedFile = new BufferedReader(file);
 
