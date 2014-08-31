@@ -8,7 +8,8 @@ public class Grid {
 
     public int rows;
     public int cols;
-    public int[][] body;
+    public String[][] body;
+    private static final String DEFAULT_FILLER = "__";
 
     public Grid(int xMax, int yMax) {
         cols = xMax + 1;
@@ -18,7 +19,11 @@ public class Grid {
     }
 
     private void createBody() {
-        this.body = new int[this.rows][this.cols];
+        this.body = new String[this.rows][this.cols];
+
+        for (int i = 0; i < this.body.length; i++) {
+            Arrays.fill(this.body[i], DEFAULT_FILLER);
+        }
     }
 
 }

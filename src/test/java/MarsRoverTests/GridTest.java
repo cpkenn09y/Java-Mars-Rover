@@ -31,7 +31,7 @@ public class GridTest {
     @Test
     public void testBody2x2() {
         Grid testGrid1 = new Grid(2,2);
-        int[][] intArrayTwoD = {{0,0,0}, {0,0,0}, {0,0,0}};
+        String[][] intArrayTwoD = {{"__","__","__"}, {"__","__","__"}, {"__","__","__"}};
         assertArrayEquals(
             "A 2x2 grid should have 3 columns and 3 rows, a total of 9 coordinates",
             testGrid1.body,
@@ -42,7 +42,7 @@ public class GridTest {
     @Test
     public void testBody2x3() {
         Grid testGrid2 = new Grid(2,3);
-        int[][] intArrayTwoD = {{0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}};
+        String[][] intArrayTwoD = {{"__","__","__"}, {"__","__","__"}, {"__","__","__"}, {"__","__","__"}};
         assertArrayEquals(
             "A 2x3 grid should have 3 columns and 4 rows, totaling 12 coordinates",
             testGrid2.body,
