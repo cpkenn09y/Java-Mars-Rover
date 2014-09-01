@@ -243,4 +243,28 @@ public class RoverTest {
         );
     }
 
+    public void testExecute() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "E");
+        Rover testRover = new Rover("r1", posData);
+        testRover.execute("MLMMRR");
+        assertEquals(
+            "Rover should be able to execute a series of commands, checking x value",
+            testRover.x,
+            4
+        );
+        assertEquals(
+            "Rover should be able to execute a series of commands, checking y value",
+            testRover.y,
+            6
+        );
+        assertEquals(
+            "Rover should be able to execute a series of commands, checking orientation",
+            testRover.orientation,
+            'S'
+        );
+    }
+
 }

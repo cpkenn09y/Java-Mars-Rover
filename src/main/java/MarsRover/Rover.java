@@ -57,4 +57,25 @@ public class Rover {
                 break;
         }
     }
+
+    public void execute(String movementCommands) {
+        String[] commandList = movementCommands.split("");
+        for (int i = 0; i < commandList.length; i++) {
+            this.doMovement(commandList[i]);
+        }
+    }
+
+    private void doMovement(String command) {
+        char commandChar = command.charAt(0);
+
+        switch (commandChar) {
+            case 'M': this.moveForward();
+                break;
+            case 'R': this.turnRight();
+                break;
+            case 'L': this.turnLeft();
+                break;
+        }
+    }
+
 }
