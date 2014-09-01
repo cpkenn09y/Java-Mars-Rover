@@ -26,4 +26,8 @@ public class Grid {
         }
     }
 
+    public void placeRover(Rover rover) {
+        this.body[this.body.length - rover.y -1][rover.x] = rover.name;
+    };
+
 }
