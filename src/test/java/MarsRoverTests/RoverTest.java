@@ -185,4 +185,62 @@ public class RoverTest {
             'N'
         );
     }
+
+    @Test
+    public void testTurnLeftNorthToWest() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "N");
+        Rover testRover = new Rover("r1", posData);
+        testRover.turnLeft();
+        assertEquals(
+            "Rover should be able to turn left while facing North",
+            testRover.orientation,
+            'W'
+        );
+    }
+
+    public void testTurnLeftWestToSouth() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "W");
+        Rover testRover = new Rover("r1", posData);
+        testRover.turnLeft();
+        assertEquals(
+            "Rover should be able to turn left while facing West",
+            testRover.orientation,
+            'S'
+        );
+    }
+
+    public void testTurnLeftSouthToEast() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "S");
+        Rover testRover = new Rover("r1", posData);
+        testRover.turnLeft();
+        assertEquals(
+            "Rover should be able to turn left while facing South",
+            testRover.orientation,
+            'E'
+        );
+    }
+
+    public void testTurnLeftEastToNorth() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "E");
+        Rover testRover = new Rover("r1", posData);
+        testRover.turnLeft();
+        assertEquals(
+            "Rover should be able to turn left while facing East",
+            testRover.orientation,
+            'N'
+        );
+    }
+
 }

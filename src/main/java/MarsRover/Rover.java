@@ -44,4 +44,17 @@ public class Rover {
                 break;
         }
     }
+
+    public void turnLeft() {
+        switch (this.orientation) {
+            case 'N': this.orientation = 'W';
+                break;
+            case 'W': this.orientation = 'S';
+                break;
+            case 'S': this.orientation = 'E';
+                break;
+            case 'E': this.orientation = 'N';
+                break;
+        }
+    }
 }
