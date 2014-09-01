@@ -69,9 +69,4 @@ public class AppController {
         this.moveRovers();
     }
 
-    public static void main(String[] args) throws IOException {
-        String defaultTxtFile = "TW_input.txt";
-        AppController app = new AppController();
-        app.run(defaultTxtFile);
-    }
 }
