@@ -125,4 +125,64 @@ public class RoverTest {
             2
         );
     }
+
+    @Test
+    public void testTurnRightNorthToEast() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "N");
+        Rover testRover = new Rover("r1", posData);
+        testRover.turnRight();
+        assertEquals(
+            "Rover should be able to turn right while facing North",
+            testRover.orientation,
+            'E'
+        );
+    }
+
+    @Test
+    public void testTurnRightEastToSouth() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "E");
+        Rover testRover = new Rover("r1", posData);
+        testRover.turnRight();
+        assertEquals(
+            "Rover should be able to turn right while facing East",
+            testRover.orientation,
+            'S'
+        );
+    }
+
+    @Test
+    public void testTurnRightSouthToWest() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "S");
+        Rover testRover = new Rover("r1", posData);
+        testRover.turnRight();
+        assertEquals(
+            "Rover should be able to turn right while facing South",
+            testRover.orientation,
+            'W'
+        );
+    }
+
+    @Test
+    public void testTurnRightWestToNorth() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "W");
+        Rover testRover = new Rover("r1", posData);
+        testRover.turnRight();
+        assertEquals(
+            "Rover should be able to turn right while facing West",
+            testRover.orientation,
+            'N'
+        );
+    }
 }
