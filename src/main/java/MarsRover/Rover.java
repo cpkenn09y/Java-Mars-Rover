@@ -10,12 +10,25 @@ public class Rover {
     public String name;
     public int x;
     public int y;
-    public String orientation;
+    public char orientation;
 
     public Rover(String givenName, HashMap<String,String> position) {
         name = givenName;
         x = Integer.parseInt(position.get("xCoordinate"));
         y = Integer.parseInt(position.get("yCoordinate"));
-        orientation = position.get("orientation");
+        orientation = position.get("orientation").charAt(0);
+    }
+
+    public void moveForward() {
+        switch (this.orientation) {
+            case 'N': this.y += 1;
+                break;
+            case 'S': this.y -= 1;
+                break;
+            case 'E': this.x += 1;
+                break;
+            case 'W': this.x -= 1;
+                break;
+        }
     }
 }

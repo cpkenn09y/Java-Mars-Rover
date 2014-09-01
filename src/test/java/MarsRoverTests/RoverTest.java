@@ -62,7 +62,67 @@ public class RoverTest {
         assertEquals(
             "Rovers should have an orientation",
             testRover.orientation,
-            "E"
+            'E'
+        );
+    }
+
+    @Test
+    public void testMoveForwardNorth() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "N");
+        Rover testRover = new Rover("r1", posData);
+        testRover.moveForward();
+        assertEquals(
+            "Rover should be able to move forward while facing North",
+            testRover.y,
+            5
+        );
+    }
+
+    @Test
+    public void testMoveForwardSouth() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "S");
+        Rover testRover = new Rover("r1", posData);
+        testRover.moveForward();
+        assertEquals(
+            "Rover should be able to move forward while facing South",
+            testRover.y,
+            3
+        );
+    }
+
+    @Test
+    public void testMoveForwardEast() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "E");
+        Rover testRover = new Rover("r1", posData);
+        testRover.moveForward();
+        assertEquals(
+            "Rover should be able to move forward while facing East",
+            testRover.x,
+            4
+        );
+    }
+
+    @Test
+    public void testMoveForwardWest() {
+        HashMap<String,String> posData = new HashMap();
+        posData.put("xCoordinate", "3");
+        posData.put("yCoordinate", "4");
+        posData.put("orientation", "W");
+        Rover testRover = new Rover("r1", posData);
+        testRover.moveForward();
+        assertEquals(
+            "Rover should be able to move forward while facing West",
+            testRover.x,
+            2
         );
     }
 }
