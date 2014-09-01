@@ -15,10 +15,10 @@ public class Grid {
         cols = xMax + 1;
         rows = yMax + 1;
 
-        this.createBody();
+        this.fillWithDefault();
     }
 
-    private void createBody() {
+    public void fillWithDefault() {
         this.body = new String[this.rows][this.cols];
 
         for (int i = 0; i < this.body.length; i++) {
