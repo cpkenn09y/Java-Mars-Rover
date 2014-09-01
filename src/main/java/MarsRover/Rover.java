@@ -8,14 +8,14 @@ import java.util.HashMap;
 public class Rover {
 
     public String name;
-    public String x;
-    public String y;
+    public int x;
+    public int y;
     public String orientation;
 
     public Rover(String givenName, HashMap<String,String> position) {
         name = givenName;
-        x = position.get("xCoordinate");
-        y = position.get("yCoordinate");
+        x = Integer.parseInt(position.get("xCoordinate"));
+        y = Integer.parseInt(position.get("yCoordinate"));
         orientation = position.get("orientation");
     }
 }

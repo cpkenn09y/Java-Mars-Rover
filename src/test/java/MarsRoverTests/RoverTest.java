@@ -34,7 +34,7 @@ public class RoverTest {
         assertEquals(
             "Rovers should have an x coordinate",
             testRover.x,
-            "3"
+            3
         );
     }
 
@@ -48,7 +48,7 @@ public class RoverTest {
         assertEquals(
             "Rovers should have an y coordinate",
             testRover.y,
-            "4"
+            4
         );
     }
 
