@@ -15,15 +15,19 @@ public class Grid {
         cols = xMax + 1;
         rows = yMax + 1;
 
-        this.createBody();
+        this.fillWithDefault();
     }
 
-    private void createBody() {
+    public void fillWithDefault() {
         this.body = new String[this.rows][this.cols];
 
         for (int i = 0; i < this.body.length; i++) {
             Arrays.fill(this.body[i], DEFAULT_FILLER);
         }
     }
+
+    public void placeRover(Rover rover) {
+        this.body[this.body.length - rover.y -1][rover.x] = rover.name;
+    };
 
 }

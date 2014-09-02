@@ -37,26 +37,22 @@ public class ParserTest {
     public void testGetRoverPositionsForTwoRovers() {
         String[] sampInput = { "3 4", "1 2 N", "LRM", "2 2 E", "LRL"};
         Parser sampParser = new Parser(sampInput);
-        HashMap<String, String> expectedPositions = new HashMap();
-        expectedPositions.put("r1", "1 2 N");
-        expectedPositions.put("r2", "2 2 E");
+        HashMap<String, HashMap<String,String>> expectedPositions = new HashMap();
+
+        HashMap<String,String> posData1 = new HashMap();
+        posData1.put("xCoordinate", "1");
+        posData1.put("yCoordinate", "2");
+        posData1.put("orientation", "N");
+
+        HashMap<String,String> posData2 = new HashMap();
+        posData2.put("xCoordinate", "2");
+        posData2.put("yCoordinate", "2");
+        posData2.put("orientation", "E");
+
+        expectedPositions.put("r1", posData1);
+        expectedPositions.put("r2", posData2);
         assertEquals(
             "Parser should be able to get rover positions",
-            sampParser.getRoverPositions(),
-            expectedPositions
-        );
-    }
-
-    @Test
-    public void testGetRoverPositionsForThreeRovers() {
-        String[] sampInput = { "3 4", "1 2 N", "LRM", "2 2 E", "LRL", "3 3 S", "MLM"};
-        Parser sampParser = new Parser(sampInput);
-        HashMap<String, String> expectedPositions = new HashMap();
-        expectedPositions.put("r1", "1 2 N");
-        expectedPositions.put("r2", "2 2 E");
-        expectedPositions.put("r3", "3 3 S");
-        assertEquals(
-            "Parser should be able to get rover positions for many rovers",
             sampParser.getRoverPositions(),
             expectedPositions
         );

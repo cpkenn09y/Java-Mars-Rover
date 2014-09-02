@@ -24,18 +24,28 @@ public class Parser {
         return this.inputList.length/2;
     }
 
-    public HashMap<String, String> getRoverPositions() {
-        HashMap<String, String> positions = new HashMap();
+    public HashMap<String, HashMap<String,String>> getRoverPositions() {
+        HashMap<String, HashMap<String,String>> positions = new HashMap();
 
         int txtFileIndex = 1;
 
         for (int i = 0; i < this.getRoverCount(); i++) {
             String currentRover = "r" + (i + 1);
-            positions.put(currentRover, this.inputList[txtFileIndex]);
+            HashMap<String, String> roverInitialData = extractRoverInitialData(this.inputList[txtFileIndex]);
+            positions.put(currentRover, roverInitialData);
             txtFileIndex += 2;
         }
 
         return positions;
+    }
+
+    private HashMap<String, String> extractRoverInitialData(String rawPositionData) {
+        HashMap<String, String> useablePositionData = new HashMap();
+        String[] splitRoverData = rawPositionData.split("\\s+");
+        useablePositionData.put("xCoordinate", splitRoverData[0]);
+        useablePositionData.put("yCoordinate", splitRoverData[1]);
+        useablePositionData.put("orientation", splitRoverData[2]);
+        return useablePositionData;
     }
 
     public HashMap<String, String> getRoverMovements() {
