@@ -12,7 +12,8 @@ public class AppInterface {
         ContextPrinter cp = new ContextPrinter();
 
         // READ TEXT FILE AND MENTION PARSER
-        appController.read(args[0]);
+        String txtFilePath = args.length == 0 ? "TW_input.txt" : args[0];
+        appController.read(txtFilePath);
         cp.printTextFileBeingRead();
         cp.printList(appController.Parser.inputList);
         cp.printParserExtractingData();
