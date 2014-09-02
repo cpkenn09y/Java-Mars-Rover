@@ -1,6 +1,20 @@
 # Java Rovers on Mars
 ___
 
+### To Run Program:
+
+```
+$ gradle build
+$ java -jar build/libs/MarsRover-1.0.jar TW_input.txt
+```
+
+##### For Funsies, follow up with these next two commands:
+
+```
+$ java -jar build/libs/MarsRover-1.0.jar three_rovers.txt
+$ java -jar build/libs/MarsRover-1.0.jar eight_rovers.txt
+```
+
 ### Code Design Aspects
 
 * Write code that was well tested and scalable; there are 31 tests and I frequently refactored code
@@ -13,6 +27,7 @@ ___
 
 ### Assumptions Made
 
+* a Java developer with "Gradle" will be the one executing this project 
 * most people assume that a coordinate plane's origin is at the bottom left
 
 ### Short Reflections
