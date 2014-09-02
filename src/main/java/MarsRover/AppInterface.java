@@ -12,7 +12,7 @@ public class AppInterface {
         ContextPrinter cp = new ContextPrinter();
 
         // READ TEXT FILE AND MENTION PARSER
-        appController.read("TW_input.txt");
+        appController.read(args[0]);
         cp.printTextFileBeingRead();
         cp.printList(appController.Parser.inputList);
         cp.printParserExtractingData();
