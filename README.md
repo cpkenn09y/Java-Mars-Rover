@@ -4,7 +4,6 @@ ___
 ### To Run Program:
 
 ```
-$ cd MarsRover
 $ gradle build
 $ java -jar build/libs/MarsRover-1.0.jar TW_input.txt
 ```
