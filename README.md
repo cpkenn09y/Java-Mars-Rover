@@ -4,6 +4,7 @@ ___
 ### To Run Program:
 
 ```
+$ cd MarsRover
 $ gradle build
 $ java -jar build/libs/MarsRover-1.0.jar TW_input.txt
 ```
@@ -14,6 +15,7 @@ $ java -jar build/libs/MarsRover-1.0.jar TW_input.txt
 $ java -jar build/libs/MarsRover-1.0.jar three_rovers.txt
 $ java -jar build/libs/MarsRover-1.0.jar eight_rovers.txt
 ```
+Note: The code above is expected to be executed from within the root directory, "MarsRover"
 
 ### Code Design Aspects
 
