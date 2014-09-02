@@ -17,7 +17,7 @@ public class ContextPrinter {
     };
 
     public void printList(String[] inputList) {
-        System.out.println("TEXT FILE READ AS FOLLOWS:");
+        System.out.println("TEXT FILE READS AS FOLLOWS:");
         System.out.println("");
         pause(500);
         for (int i = 0; i < inputList.length; i++) {
