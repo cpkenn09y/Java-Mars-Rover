@@ -1,7 +1,20 @@
 # Java Rovers on Mars
 ___
 
+_Prerequisite to run program_
+
+* Gradle
+```
+$ brew install gradle
+```
+
+Note:
+* Link for more info about [gradle](http://www.gradle.org/) and in case you don't have [brew](http://brew.sh/)
+
+
 ### To Run Program:
+---
+_Open the project and run the following code from the root directory, "MarsRover"_
 
 ```
 $ gradle build
@@ -14,7 +27,6 @@ $ java -jar build/libs/MarsRover-1.0.jar TW_input.txt
 $ java -jar build/libs/MarsRover-1.0.jar three_rovers.txt
 $ java -jar build/libs/MarsRover-1.0.jar eight_rovers.txt
 ```
-Note: The code above is expected to be executed from within the root directory, "MarsRover"
 
 ### Code Design Aspects
 
@@ -28,7 +40,7 @@ Note: The code above is expected to be executed from within the root directory, 
 
 ### Assumptions Made
 
-* a Java developer with "Gradle" will be the one executing this project 
+* a Java developer with "Gradle" will be the one executing this project
 * most people assume that a coordinate plane's origin is at the bottom left
 
 ### Short Reflections
@@ -67,7 +79,7 @@ Note: The code above is expected to be executed from within the root directory, 
 ##### AppInterface
 * uses the ContextPrinter and Printer to deliver a good user experience
 * simply execute main method
- 
+
 ##### ContextPrinter
 * contains a series of text that tells user the program execution details
 
