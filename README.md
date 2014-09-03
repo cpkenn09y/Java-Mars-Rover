@@ -1,20 +1,18 @@
 # Java Rovers on Mars
 ___
 
-_Prerequisite to run program_
+
+### To Run Program:
+######Prerequisite
 
 * Gradle
 ```
 $ brew install gradle
 ```
 
-Note:
-* Link for more info about [gradle](http://www.gradle.org/) and in case you don't have [brew](http://brew.sh/)
+_Link for more info about [gradle](http://www.gradle.org/) or in case you don't have [brew](http://brew.sh/)_
 
-
-### To Run Program:
----
-_Open the project and run the following code from the root directory, "MarsRover"_
+##### Enter the following code from the root directory, "MarsRover"
 
 ```
 $ gradle build
@@ -40,7 +38,6 @@ $ java -jar build/libs/MarsRover-1.0.jar eight_rovers.txt
 
 ### Assumptions Made
 
-* a Java developer with "Gradle" will be the one executing this project
 * most people assume that a coordinate plane's origin is at the bottom left
 
 ### Short Reflections
@@ -70,7 +67,7 @@ $ java -jar build/libs/MarsRover-1.0.jar eight_rovers.txt
 * strong predisposition toward using HashMaps
 
 ##### AppController
-* leverages all the previous mentioned components
+* leverages all the previously mentioned components
 * Fully completes challenge in three steps:
     * 1) Instantiate 2) read method 3) run method
 
