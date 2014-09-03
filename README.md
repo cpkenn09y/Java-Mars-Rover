@@ -5,21 +5,19 @@ ___
 ### To Run Program:
 ######Prerequisite
 
-* Gradle
+* __Gradle__ | _Link for more info about [gradle](http://www.gradle.org/) or in case you don't have [brew](http://brew.sh/)_
 ```
 $ brew install gradle
 ```
 
-_Link for more info about [gradle](http://www.gradle.org/) or in case you don't have [brew](http://brew.sh/)_
-
-##### Enter the following code from the root directory, "MarsRover"
+#### 1) Enter the following code from the root directory, "MarsRover"
 
 ```
 $ gradle build
 $ java -jar build/libs/MarsRover-1.0.jar TW_input.txt
 ```
 
-##### For Funsies, follow up with these next two commands:
+#### 2) For Funsies, follow up with these next two commands:
 
 ```
 $ java -jar build/libs/MarsRover-1.0.jar three_rovers.txt
