@@ -7,48 +7,63 @@ import java.io.IOException;
  */
 public class AppInterface {
 
-    public static void main(String[] args) throws IOException {
-        AppController appController = new AppController();
-        // READ TEXT FILE AND MENTION PARSER
+    private static void readTxtFile(AppController controller, String[] args) throws IOException {
         String txtFilePath = args.length == 0 ? "TW_input.txt" : args[0];
-        appController.read(txtFilePath);
+        controller.read(txtFilePath);
         ContextPrinter.printTextFileBeingRead();
-        ContextPrinter.printList(appController.Parser.inputList);
+        ContextPrinter.printList(controller.Parser.inputList);
         ContextPrinter.printParserExtractingData();
+    }
 
-        // CREATE GRID
-        appController.createGrid();
+    private static void createGrid(AppController controller) {
+        controller.createGrid();
         ContextPrinter.printGridCreated();
         ContextPrinter.printSetUpToCurrentGridState();
-        Printer.show(appController.Grid.body);
+        Printer.show(controller.Grid.body);
         Printer.show("");
         ContextPrinter.pause(2000);
+    }
 
-        // CREATE ROVERS
-        appController.createRovers();
+    private static void createRover(AppController controller) {
+        controller.createRovers();
         ContextPrinter.printCreatingRovers();
-        ContextPrinter.printRoversCreated(appController.Rovers);
+        ContextPrinter.printRoversCreated(controller.Rovers);
+    }
 
-        // PLACING ROVERS
+    private static void placeRovers(AppController controller) {
         ContextPrinter.printNowPlacingRovers();
-        appController.placeRovers();
+        controller.placeRovers();
+    }
 
-        // ROVER INITIAL POSITIONS
+    private static void printInitialRoverPositions(AppController controller) {
         ContextPrinter.printPositionsStatement("INITIAL");
-        Printer.show(appController.Grid.body);
+        Printer.show(controller.Grid.body);
         Printer.show("");
         ContextPrinter.pause(2000);
-        ContextPrinter.printRoverPositions(appController.Rovers);
+        ContextPrinter.printRoverPositions(controller.Rovers);
+    }
 
-        // ROVER EXECUTE MOVEMENT COMMANDS
+    private static void executeRoverCommands(AppController controller) {
         ContextPrinter.printRoversExecuteCommands();
-        appController.moveRovers();
+        controller.moveRovers();
+    }
 
-        // ROVERS IN FINAL POSITION
+    private static void printFinalRoverPositions(AppController controller) {
         ContextPrinter.printPositionsStatement("FINAL");
-        Printer.show(appController.Grid.body);
+        Printer.show(controller.Grid.body);
         Printer.show("");
         ContextPrinter.pause(2000);
-        ContextPrinter.printRoverPositions(appController.Rovers);
+        ContextPrinter.printRoverPositions(controller.Rovers);
+    }
+
+    public static void main(String[] args) throws IOException {
+        AppController appController = new AppController();
+        readTxtFile(appController, args);
+        createGrid(appController);
+        createRover(appController);
+        placeRovers(appController);
+        printInitialRoverPositions(appController);
+        executeRoverCommands(appController);
+        printFinalRoverPositions(appController);
     }
 }
