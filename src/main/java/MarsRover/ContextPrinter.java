@@ -7,16 +7,12 @@ import MarsRover.Rover;
  */
 public class ContextPrinter {
 
-    public ContextPrinter() {
-
-    }
-
-    public void printTextFileBeingRead() {
+    public static void printTextFileBeingRead() {
         System.out.println("Text file being read...");
         pauseAndPrintLine();
-    };
+    }
 
-    public void printList(String[] inputList) {
+    public static void printList(String[] inputList) {
         System.out.println("TEXT FILE READS AS FOLLOWS:");
         System.out.println("");
         pause(500);
@@ -27,22 +23,22 @@ public class ContextPrinter {
         System.out.println("");
     }
 
-    public void printParserExtractingData() {
+    public static void printParserExtractingData() {
         System.out.println("Parser is now extracting Grid and Rover data...");
         pauseAndPrintLine();
     }
 
-    public void printGridCreated() {
+    public static void printGridCreated() {
         System.out.println("Grid created!");
         pauseAndPrintLine();
     }
 
-    public void printSetUpToCurrentGridState() {
+    public static void printSetUpToCurrentGridState() {
         System.out.println("GRID STATE IS AS FOLLOWS:");
         pauseAndPrintLine();
     }
 
-    public void printCreatingRovers() {
+    public static void printCreatingRovers() {
         System.out.println("");
         pause(1000);
         System.out.println("Now creating Rovers...");
@@ -50,7 +46,7 @@ public class ContextPrinter {
         System.out.println("");
     }
 
-    public void printRoversCreated(Rover[] rovers) {
+    public static void printRoversCreated(Rover[] rovers) {
         String message = "ROVERS CREATED: ";
 
         for (int i = 0; i < rovers.length; i++) {
@@ -63,23 +59,23 @@ public class ContextPrinter {
         pauseAndPrintLine();
     }
 
-    public void printNowPlacingRovers() {
+    public static void printNowPlacingRovers() {
         System.out.println("Now placing Rovers on Grid...");
         pause(2000);
         System.out.println("");
     }
 
-    public void printRoversExecuteCommands() {
+    public static void printRoversExecuteCommands() {
         System.out.println("Now, Rovers execute the commands!!!");
         pauseAndPrintLine();
     }
 
-    public void printPositionsStatement(String position) {
+    public static void printPositionsStatement(String position) {
         System.out.println("ROVERS " + position + " POSITIONS:");
         pauseAndPrintLine();
     }
 
-    public void printRoverPositions(Rover[] rovers) {
+    public static void printRoverPositions(Rover[] rovers) {
         for (int i = 0; i < rovers.length; i++) {
             System.out.println(rovers[i].name + " -> ( " + rovers[i].x + " , " + rovers[i].y + " , " + rovers[i].orientation + " )");
         }
@@ -87,12 +83,12 @@ public class ContextPrinter {
         pause(2000);
     }
 
-    private void pauseAndPrintLine() {
+    private static void pauseAndPrintLine() {
         pause(1000);
         System.out.println("");
     }
 
-    public void pause(Integer milliseconds) {
+    public static void pause(Integer milliseconds) {
         try {
             Thread.sleep(milliseconds);
         } catch(InterruptedException ex) {
